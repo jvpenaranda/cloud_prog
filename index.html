@@ -7,8 +7,22 @@
 </head>
 <body>
     <h1>Name and Age</h1>
-    <h1>{{name}}</h1>
-    <h1>{{age}}</h1>
+    <input type="text" id="names" placeholder="Enter names">
+    <input type="text" id="ages" placeholder="Enter ages">
+    <button id ="submit" type="submit">Submit</button>
+    <h1 id ="nameText"></h1>
+    <h1 id="ageText"></h1>
     </div>
+    <script>
+        const nameText = document.getElementById("nameText");
+        const ageText = document.getElementById("ageText");
+        submit.addEventListener("click", function(){
+            let names = document.getElementById("names").value;
+            let ages = document.getElementById("ages").value;
+            nameText.innerHTML = `Name: ${names}`;
+            ageText.innerHTML = `Ages: ${ages}`;
+        });
+    </script>
 </body>
+
 </html>
