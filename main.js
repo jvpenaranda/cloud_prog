@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
             res.writeHead(500, headers);             
             res.end(err);         
         } else {             
-            const render = data.replace("{{name}}", "Penaranda & Doronila").replace("{{age}}", "22 & 24");             
+            const render = data.replace("{{name}}").replace("{{age}}");             
             res.writeHead(200, headers);             
             res.end(render);         
         }     
